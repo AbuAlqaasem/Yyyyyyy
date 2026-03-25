@@ -49,7 +49,7 @@ export function Navbar() {
             }}
             className="group flex items-center gap-2"
           >
-            <span className="font-mono text-xs tracking-widest text-muted-foreground">PORTFEL</span>
+            <span className="font-mono text-xs tracking-widest text-muted-foreground">YUSUPOV STUDIO</span>
             <span className="w-1.5 h-1.5 rounded-full bg-accent group-hover:scale-150 transition-transform duration-300" />
           </a>
 

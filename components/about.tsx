@@ -4,11 +4,11 @@ import { useRef } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 
 const statements = [
-  "Men insonlar bilan birgalikda o'ylaydiган maxsulotlar quraman.",
-  "Tizimlarni dizayn qilaman ular o'zgaradi va rivojlanadi.",
-  "Interfeys ko'rinishida natural bo'lishi kerak.",
-  "Har bir o'zaro ta'sir suhbatdir.",
-  "Kod faqat kristallashgan fikrdir.",
+  "Biz kuchli vizual xikoyalar yaratamiz.",
+  "Har bir dizayn nimadir aytishni maqsad qiladi.",
+  "Baranda to'g'ri rangni tanlash muhim.",
+  "Tipografiya kommunikasiyaning tili.",
+  "Estetika va funksionallik birgalikda ishlaydi.",
 ]
 
 export function About() {
@@ -32,7 +32,7 @@ export function About() {
         className="px-8 md:px-12 mb-0 py-20"
       >
         <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">03 — FALSAFA</p>
-        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Ongning Oqimi</h2>
+        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Dizayn Filosofiyasi</h2>
       </motion.div>
 
       {/* Horizontal Scroll Container */}
