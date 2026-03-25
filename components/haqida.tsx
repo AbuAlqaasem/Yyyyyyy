@@ -11,7 +11,7 @@ const statements = [
   "Estetika va funksionallik birgalikda ishlaydi.",
 ]
 
-export function About() {
+export function Haqida() {
   const containerRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -22,7 +22,7 @@ export function About() {
   const smoothX = useSpring(x, { stiffness: 100, damping: 30 })
 
   return (
-    <section id="about" ref={containerRef} className="relative py-32 overflow-hidden md:py-0">
+    <section id="haqida" ref={containerRef} className="relative py-32 overflow-hidden md:py-0">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -31,8 +31,8 @@ export function About() {
         transition={{ duration: 0.8 }}
         className="px-8 md:px-12 mb-0 py-20"
       >
-        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">02 — FALSAFA</p>
-        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Dizayn Filosofiyasi</h2>
+        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">01 — HAQIDA</p>
+        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Yusupov Studios Haqida</h2>
       </motion.div>
 
       {/* Horizontal Scroll Container */}

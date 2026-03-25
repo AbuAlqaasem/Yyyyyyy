@@ -51,7 +51,7 @@ export function Works() {
   }
 
   return (
-    <section className="relative py-32 px-8 md:px-12 md:py-24">
+    <section id="works" className="relative py-32 px-8 md:px-12 md:py-24">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ export function Works() {
         transition={{ duration: 0.8 }}
         className="mb-24"
       >
-        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">04 — TANLANGAN ISHLAR</p>
+        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">03 — TANLANGAN ISHLAR</p>
         <h2 className="font-sans text-3xl md:text-5xl font-light italic">Buzuluv Galereyasi</h2>
       </motion.div>
 
