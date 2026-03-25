@@ -51,7 +51,7 @@ export function Footer() {
               }}
               transition={{ duration: 0.3 }}
             >
-              Let's <span className="italic">Collaborate</span>
+              Keling <span className="italic">Hamkorlik Qilaylik</span>
             </motion.h2>
 
             <motion.div
@@ -72,7 +72,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Local Time */}
           <div className="font-mono text-xs tracking-widest text-muted-foreground">
-            <span className="mr-2">LOCAL TIME</span>
+            <span className="mr-2">MAHALLIY VAQT</span>
             <span className="text-white tabular-nums">{time}</span>
           </div>
 

@@ -29,11 +29,11 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">01 — DISCIPLINE</p>
+          <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">01 — INTIZOM</p>
           <h2 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
-            SYSTEM
+            TIZIM
             <br />
-            <span className="italic">ARCHITECT</span>
+            <span className="italic">ME'MAR</span>
           </h2>
         </motion.div>
 
@@ -50,7 +50,7 @@ export function Hero() {
             whileTap={{ scale: 0.95 }}
             className="relative px-8 py-4 border border-white/20 rounded-full font-mono text-sm tracking-widest uppercase bg-transparent backdrop-blur-sm hover:bg-white hover:text-black transition-colors duration-500"
           >
-            Initialize
+            Boshlash
             <span className="absolute -top-1 -right-1 w-2 h-2 bg-[#2563eb] rounded-full animate-pulse" />
           </motion.button>
         </motion.div>
@@ -62,11 +62,11 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="self-end text-right"
         >
-          <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">02 — CRAFT</p>
+          <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-2">02 — MEHNATI</p>
           <h2 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-balance">
-            INTERFACE
+            INTERFEYS
             <br />
-            <span className="italic">DESIGNER</span>
+            <span className="italic">DIZAYNER</span>
           </h2>
         </motion.div>
       </motion.div>
@@ -83,7 +83,7 @@ export function Hero() {
           transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Scroll</span>
+          <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Scroll
           <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent" />
         </motion.div>
       </motion.div>

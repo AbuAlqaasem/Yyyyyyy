@@ -8,28 +8,28 @@ const techItems = [
   "TYPESCRIPT",
   "PYTHON",
   "PYTORCH",
-  "LATENCY",
-  "INTUITION",
+  "KECHIKISH",
+  "INTUITISIYA",
   "OPENAI",
-  "EMPATHY",
+  "HAMDARDLIK",
   "WEBGL",
   "NODE.JS",
-  "PRECISION",
+  "ANIQLIK",
 ]
 
 const concepts = [
-  "ARCHITECTURE",
-  "SYSTEMS",
-  "INTERFACES",
-  "ALGORITHMS",
-  "EMERGENCE",
-  "COGNITION",
-  "SYNTHESIS",
-  "VELOCITY",
-  "ENTROPY",
-  "FLUX",
-  "AXIOM",
-  "TENSOR",
+  "ARXITEKTURA",
+  "TIZIMLAR",
+  "INTERFEYSAR",
+  "ALGORITMLAR",
+  "PAYDO BO'LISH",
+  "IDROKLASH",
+  "SINTEZ",
+  "TEZLIK",
+  "ENTROPIYA",
+  "OQIM",
+  "AKSIOMA",
+  "TENZOR",
 ]
 
 function MarqueeRow({ items, direction = "left" }: { items: string[]; direction?: "left" | "right" }) {
@@ -79,7 +79,7 @@ export function TechMarquee() {
         transition={{ duration: 0.8 }}
         className="px-8 md:px-12 mb-16"
       >
-        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">05 — TECHNICAL ARSENAL</p>
+        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">05 — TEXNIK ARSENAL</p>
       </motion.div>
 
       {/* Marquee Rows */}

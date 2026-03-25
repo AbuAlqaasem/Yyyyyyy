@@ -7,25 +7,25 @@ import { motion, useMotionValue, useSpring } from "framer-motion"
 
 const projects = [
   {
-    title: "Neural Interface",
+    title: "Nerv Interfeysi",
     tags: ["Next.js", "OpenAI", "WebGL"],
     image: "/abstract-neural-network-visualization-dark-theme.jpg",
     year: "2024",
   },
   {
-    title: "Quantum Dashboard",
+    title: "Kvantum Boshqaruvi",
     tags: ["React", "D3.js", "Python"],
     image: "/futuristic-data-dashboard-dark-minimal.jpg",
     year: "2024",
   },
   {
-    title: "Synthetic Memory",
+    title: "Suniy Xotira",
     tags: ["TypeScript", "LangChain", "Vector DB"],
     image: "/abstract-memory-storage-visualization.jpg",
     year: "2023",
   },
   {
-    title: "Echo Protocol",
+    title: "Eko Protokoli",
     tags: ["Rust", "WebAssembly", "Audio"],
     image: "/sound-wave-visualization-dark-theme.jpg",
     year: "2023",
@@ -60,8 +60,8 @@ export function Works() {
         transition={{ duration: 0.8 }}
         className="mb-24"
       >
-        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">04 — SELECTED WORKS</p>
-        <h2 className="font-sans text-3xl md:text-5xl font-light italic">The Distortion Gallery</h2>
+        <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">04 — TANLANGAN ISHLAR</p>
+        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Buzuluv Galereyasi</h2>
       </motion.div>
 
       {/* Projects List */}
