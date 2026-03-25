@@ -83,7 +83,7 @@ export function Hero() {
           transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Scroll
+          <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Scroll</span>
           <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent" />
         </motion.div>
       </motion.div>
