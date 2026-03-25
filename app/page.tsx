@@ -19,9 +19,7 @@ export default function Home() {
         <Haqida />
         <SectionBlend />
         <About />
-        <SectionBlend />
         <Works />
-        <SectionBlend />
         <TechMarquee />
         <Footer />
       </main>
