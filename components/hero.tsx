@@ -14,6 +14,13 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
 
+  const handleScroll = () => {
+    const aboutSection = document.querySelector("#about")
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section ref={containerRef} className="relative h-screen w-full overflow-hidden bg-[#050505]">
       {/* 3D Sphere Background */}
@@ -46,6 +53,7 @@ export function Hero() {
         >
           <motion.button
             data-cursor-hover
+            onClick={handleScroll}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="relative px-8 py-4 border border-white/20 rounded-full font-mono text-sm tracking-widest uppercase bg-transparent backdrop-blur-sm hover:bg-white hover:text-black transition-colors duration-500"
