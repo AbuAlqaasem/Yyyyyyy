@@ -51,7 +51,7 @@ export function Footer() {
               }}
               transition={{ duration: 0.3 }}
             >
-              Yusupov <span className="italic">Studios</span>
+              Keling <span className="italic">Hamkorlik Qilaylik</span>
             </motion.h2>
 
             <motion.div
