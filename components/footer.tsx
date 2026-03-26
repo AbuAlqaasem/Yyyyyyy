@@ -27,7 +27,9 @@ export function Footer() {
     <footer className="relative">
       {/* Main CTA */}
       <motion.a
-        href="mailto:hello@example.com"
+        href="https://instagram.com/alshashi_571"
+        target="_blank"
+        rel="noopener noreferrer"
         data-cursor-hover
         className="relative block overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}

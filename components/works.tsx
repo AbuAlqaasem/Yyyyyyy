@@ -1,55 +1,29 @@
 "use client"
 
-import type React from "react"
-
-import { useState, useRef } from "react"
-import { motion, useMotionValue, useSpring } from "framer-motion"
+import { useState } from "react"
+import { motion } from "framer-motion"
+import Link from "next/link"
 
 const projects = [
   {
-    title: "Nerv Interfeysi",
-    tags: ["Next.js", "OpenAI", "WebGL"],
-    image: "/abstract-neural-network-visualization-dark-theme.jpg",
-    year: "2024",
+    title: "UCC",
+    description: "Korallar Kompaniyasi",
   },
   {
-    title: "Kvantum Boshqaruvi",
-    tags: ["React", "D3.js", "Python"],
-    image: "/futuristic-data-dashboard-dark-minimal.jpg",
-    year: "2024",
+    title: "ATIRGUL",
+    description: "Atir va gullar Kompaniyasi",
   },
   {
-    title: "Suniy Xotira",
-    tags: ["TypeScript", "LangChain", "Vector DB"],
-    image: "/abstract-memory-storage-visualization.jpg",
-    year: "2023",
+    title: "TANSIQ",
+    description: "Milliy taomlar restorani",
   },
   {
-    title: "Eko Protokoli",
-    tags: ["Rust", "WebAssembly", "Audio"],
-    image: "/sound-wave-visualization-dark-theme.jpg",
-    year: "2023",
+    title: "OLDSHAHAR",
+    description: "Uy remonti Kompaniyasi",
   },
 ]
 
 export function Works() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
-
-  const springX = useSpring(mouseX, { stiffness: 150, damping: 20 })
-  const springY = useSpring(mouseY, { stiffness: 150, damping: 20 })
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect()
-      mouseX.set(e.clientX - rect.left)
-      mouseY.set(e.clientY - rect.top)
-    }
-  }
-
   return (
     <section id="works" className="relative py-32 px-8 md:px-12 md:py-24">
       {/* Section Header */}
@@ -61,11 +35,11 @@ export function Works() {
         className="mb-24"
       >
         <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">03 — TANLANGAN ISHLAR</p>
-        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Buzuluv Galereyasi</h2>
+        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Bizning Ishlarimiz</h2>
       </motion.div>
 
       {/* Projects List */}
-      <div ref={containerRef} onMouseMove={handleMouseMove} className="relative">
+      <div className="space-y-8 md:space-y-12">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
@@ -74,80 +48,37 @@ export function Works() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
             className="relative border-t border-white/10 py-8 md:py-12"
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
           >
-            <a
-              href="#"
-              data-cursor-hover
-              className="group flex flex-col md:flex-row md:items-center justify-between gap-4"
-            >
-              {/* Year */}
-              <span className="font-mono text-xs text-muted-foreground tracking-widest order-1 md:order-none">
-                {project.year}
-              </span>
-
-              {/* Title */}
-              <motion.h3
-                className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight group-hover:text-white/70 transition-colors duration-300 flex-1"
-                animate={{
-                  x: hoveredIndex === index ? 20 : 0,
-                }}
+            <Link href={`/projects/${project.title.toLowerCase()}`}>
+              <motion.a
+                data-cursor-hover
+                className="group flex flex-col md:flex-row md:items-center justify-between gap-6"
+                whileHover={{ x: 8 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                {project.title}
-              </motion.h3>
+                {/* Title and Description */}
+                <div className="flex-1">
+                  <h3 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight group-hover:text-white/70 transition-colors duration-300 mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="font-mono text-xs md:text-sm tracking-wider text-muted-foreground">
+                    {project.description}
+                  </p>
+                </div>
 
-              {/* Tags */}
-              <div className="flex gap-2 flex-wrap order-2 md:order-none">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="font-mono text-[10px] tracking-wider px-3 py-1 border border-white/20 rounded-full text-muted-foreground"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </a>
+                {/* Circle Indicator */}
+                <motion.div
+                  className="w-3 h-3 rounded-full bg-white/60 group-hover:bg-white group-hover:scale-125 transition-all duration-300"
+                  whileHover={{ scale: 1.3 }}
+                />
+              </motion.a>
+            </Link>
           </motion.div>
         ))}
-
-        {/* Floating Image */}
-        <motion.div
-          className="absolute pointer-events-none z-50 w-64 h-40 md:w-80 md:h-48 overflow-hidden rounded-lg"
-          style={{
-            x: springX,
-            y: springY,
-            translateX: "-50%",
-            translateY: "-320%",
-          }}
-          animate={{
-            opacity: hoveredIndex !== null ? 1 : 0,
-            scale: hoveredIndex !== null ? 1 : 0.8,
-          }}
-          transition={{ duration: 0.2 }}
-        >
-          {hoveredIndex !== null && (
-            <motion.img
-              src={projects[hoveredIndex].image}
-              alt={projects[hoveredIndex].title}
-              className="w-full h-full object-cover"
-              initial={{ scale: 1.2 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.4 }}
-              style={{
-                filter: "grayscale(50%) contrast(1.1)",
-              }}
-            />
-          )}
-          {/* Glitch overlay */}
-          <div className="absolute inset-0 bg-[#2563eb]/10 mix-blend-overlay" />
-        </motion.div>
       </div>
 
       {/* Bottom Border */}
-      <div className="border-t border-white/10" />
+      <div className="border-t border-white/10 mt-8 md:mt-12" />
     </section>
   )
 }

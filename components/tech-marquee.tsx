@@ -2,34 +2,34 @@
 
 import { motion } from "framer-motion"
 
-const techItems = [
-  "NEXT.JS",
-  "REACT",
-  "TYPESCRIPT",
-  "PYTHON",
-  "PYTORCH",
-  "KECHIKISH",
-  "INTUITISIYA",
-  "OPENAI",
-  "HAMDARDLIK",
-  "WEBGL",
-  "NODE.JS",
-  "ANIQLIK",
+const missionItems = [
+  "VIZUAL",
+  "IDENTITET",
+  "BRANDING",
+  "PSIXOLOGIYA",
+  "ESTETIKA",
+  "XIKOYA",
+  "RANG",
+  "TIPOGRAFIYA",
+  "TUSHUNCHALAR",
+  "INNOVATSIYA",
+  "YARATISH",
+  "IJODIYLIK",
 ]
 
-const concepts = [
-  "ARXITEKTURA",
-  "TIZIMLAR",
-  "INTERFEYSAR",
-  "ALGORITMLAR",
-  "PAYDO BO'LISH",
-  "IDROKLASH",
-  "SINTEZ",
-  "TEZLIK",
-  "ENTROPIYA",
-  "OQIM",
-  "AKSIOMA",
-  "TENZOR",
+const toolsItems = [
+  "ADOBE ILLUSTRATOR",
+  "FIGMA",
+  "CANVA",
+  "AFFINITY DESIGNER",
+  "PHOTOSHOP",
+  "CORELDRAW",
+  "SKETCH",
+  "PROCREATE",
+  "ADOBE XD",
+  "BLENDER",
+  "INKSCAPE",
+  "LIGHTROOM",
 ]
 
 function MarqueeRow({ items, direction = "left" }: { items: string[]; direction?: "left" | "right" }) {
@@ -84,8 +84,8 @@ export function TechMarquee() {
 
       {/* Marquee Rows */}
       <div className="space-y-4">
-        <MarqueeRow items={techItems} direction="left" />
-        <MarqueeRow items={concepts} direction="right" />
+        <MarqueeRow items={missionItems} direction="left" />
+        <MarqueeRow items={toolsItems} direction="right" />
       </div>
     </section>
   )

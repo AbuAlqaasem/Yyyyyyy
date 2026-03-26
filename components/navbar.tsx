@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
-  { label: "Haqida", href: "#about" },
+  { label: "Haqida", href: "#haqida" },
   { label: "Ishlar", href: "#works" },
   { label: "Aloqa", href: "#contact" },
 ]
@@ -49,7 +49,7 @@ export function Navbar() {
             }}
             className="group flex items-center gap-2"
           >
-            <span className="font-mono text-xs tracking-widest text-muted-foreground">YUSUPOV STUDIO</span>
+            <span className="font-mono text-xs tracking-widest text-muted-foreground">YUSUPOV STUDIOS</span>
             <span className="w-1.5 h-1.5 rounded-full bg-accent group-hover:scale-150 transition-transform duration-300" />
           </a>
 
@@ -75,7 +75,7 @@ export function Navbar() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
             </span>
-                <span className="font-mono text-xs tracking-wider text-muted-foreground">ISHI UCHUN TAYYOR</span>
+                <span className="font-mono text-xs tracking-wider text-muted-foreground">BIZ ISHLAMOQDAMIZ</span>
           </div>
 
           {/* Mobile Menu Button */}
@@ -135,7 +135,7 @@ export function Navbar() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
                 </span>
-            <span className="font-mono text-xs tracking-wider text-muted-foreground">ISHI UCHUN TAYYOR</span>
+            <span className="font-mono text-xs tracking-wider text-muted-foreground">BIZ ISHLAMOQDAMIZ</span>
               </motion.div>
             </nav>
           </motion.div>

@@ -1,15 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useScroll, useTransform, useSpring } from "framer-motion"
-
-const statements = [
-  "Biz kuchli vizual xikoyalar yaratamiz.",
-  "Har bir dizayn nimadir aytishni maqsad qiladi.",
-  "Baranda to'g'ri rangni tanlash muhim.",
-  "Tipografiya kommunikasiyaning tili.",
-  "Estetika va funksionallik birgalikda ishlaydi.",
-]
+import { motion, useScroll, useTransform } from "framer-motion"
 
 export function Haqida() {
   const containerRef = useRef<HTMLElement>(null)
@@ -18,40 +10,39 @@ export function Haqida() {
     offset: ["start end", "end start"],
   })
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"])
-  const smoothX = useSpring(x, { stiffness: 100, damping: 30 })
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0])
 
   return (
-    <section id="haqida" ref={containerRef} className="relative py-32 overflow-hidden md:py-0">
+    <section id="haqida" ref={containerRef} className="relative py-32 px-8 md:px-12 md:py-24">
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="px-8 md:px-12 mb-0 py-20"
+        className="mb-16"
       >
         <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">01 — HAQIDA</p>
-        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Yusupov Studios Haqida</h2>
+        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Bizning Hikoya</h2>
       </motion.div>
 
-      {/* Horizontal Scroll Container */}
-      <div className="relative flex items-center overflow-hidden py-0 gap-0 h-16">
-        <motion.div style={{ x: smoothX }} className="flex gap-16 md:gap-24 px-8 md:px-12 whitespace-nowrap">
-          {statements.map((statement, index) => (
-            <motion.p
-              key={index}
-              className="text-4xl md:text-6xl lg:text-7xl font-sans font-light tracking-tight text-white/90"
-              style={{
-                WebkitTextStroke: index % 2 === 0 ? "none" : "1px rgba(255,255,255,0.3)",
-                color: index % 2 === 0 ? "inherit" : "transparent",
-              }}
-            >
-              {statement}
-            </motion.p>
-          ))}
-        </motion.div>
-      </div>
+      {/* Content */}
+      <motion.div style={{ opacity }} className="max-w-3xl mx-auto">
+        <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90 mb-8">
+          Yusupov Studios - 2020 yilida imtihon qog'ozining orqasida tashkil etilgan grafik dizayn studiyasi. 
+          Biz rang, tipografiya va vizual identitet orqali branding va tizimlashtirilgan kuchli vizual xikoyalar yaratamiz.
+        </p>
+        
+        <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90 mb-8">
+          Har bir loyiha bizga amaliy muammoni hal qilishning va ayniy vaqtda juda gozi chiroyli narsalar yaratishning 
+          imkoniyati. Biz ishonorman, asosiy dizayn va murakkab ijodiylik ikiala birgalikda ishlash mumkin.
+        </p>
+        
+        <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90">
+          Bizning maqsad - har bir brend uchun birdamlik, estetika, psixologiya va funktsiyaning mutamadiyen tahlili bilan 
+          vizual identitet yaratish. Biz o'z ishiga intildikinamiz, har bir loyihani xudosiga taslim qilamiz.
+        </p>
+      </motion.div>
 
       {/* Decorative Line */}
       <motion.div
@@ -59,7 +50,7 @@ export function Haqida() {
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="mt-16 mx-8 md:mx-12 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent origin-left"
+        className="mt-16 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent origin-left"
       />
     </section>
   )
