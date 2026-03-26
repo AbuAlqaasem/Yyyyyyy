@@ -29,7 +29,7 @@ export function Haqida() {
       {/* Content */}
       <motion.div style={{ opacity }} className="max-w-3xl mx-auto">
         <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90 mb-8">
-          Yusupov Studios - 2020 yilida imtihon qog'ozining orqasida tashkil etilgan grafik dizayn studiyasi. 
+          Yusupov Studios — 2020 yilida imtihon qog'ozining orqasida tashkil etilgan grafik dizayn studiyasi. 
           Biz rang, tipografiya va vizual identitet orqali branding va tizimli kuchli vizual hikoyalar yaratamiz.
         </p>
         
@@ -39,8 +39,8 @@ export function Haqida() {
         </p>
         
         <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90">
-          Bizning maqsad - har bir brend uchun o'ziga xos, estetika, psixologiya va funksiyaning to'g'ri tahlili bilan 
-          vizual identitet yaratish. Biz o'z ishiga bag'irmorpaz, har bir loyihani sifat bilan bajaramiz.
+          Bizning maqsad — har bir brend uchun o'ziga xos, estetika, psixologiya va funksiyaning to'g'ri tahlili bilan 
+          vizual identitet yaratish. Biz o'z ishiga bag'irmorjaz, har bir loyihani sifat bilan bajaramiz.
         </p>
       </motion.div>
 
