@@ -23,7 +23,7 @@ export function Haqida() {
         className="mb-16"
       >
         <p className="font-mono text-xs tracking-[0.3em] text-muted-foreground mb-4">01 — HAQIDA</p>
-        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Bizning Haqimizda</h2>
+        <h2 className="font-sans text-3xl md:text-5xl font-light italic">Biz Haqimizda</h2>
       </motion.div>
 
       {/* Content */}
