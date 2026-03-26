@@ -16,8 +16,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Haqida />
         <SectionBlend />
+        <Haqida />
         <About />
         <Works />
         <TechMarquee />
