@@ -31,13 +31,13 @@ export function Haqida() {
         <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90 mb-8">
           Yusupov Studios - 2020 yilda imtihon qog'ozining orqaisda tashkil etgan grafik dizayn studiyasi. Biz rang, tipografiya va vizual identitet orqali kuchli branding va tizimli vizual hikoyalar yaratamiz.
         </p>
-        
+
         <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90 mb-8">
           Har bir loyiha bizda juda katta ahammiyatga ega bo'lib u bizga mijozlarimizga yuqori darajadagi natijalarni yetqazishga yordam beradi. Biz ishonamizki, asosiy dizayn va murakkab ijod birgalikda ishlashi mumkin.
         </p>
-        
+
         <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90">
-          Bizninhg maqsad - har bir brend uchun o'ziga xos estetika, psixologiya va missiyaning to'g'ri tahlili bilan vizual identitet yaratish mumkin. Biz o'z ishini ustasimiz va har bir loyihani sifat bilan bajaramiz.
+          Bizninhg maqsad - har bir brend uchun o'ziga xos estetika, psixologiya va missiyaning to'g'ri tahlili bilan vizual identitet yaratish. Biz o'z ishini ustasimiz va har bir loyihani sifat bilan bajaramiz.
         </p>
       </motion.div>
 
