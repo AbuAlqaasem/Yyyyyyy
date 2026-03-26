@@ -27,7 +27,7 @@ export function Footer() {
     <footer className="relative">
       {/* Main CTA */}
       <motion.a
-        href="https://instagram.com/alshashi_571"
+        href="https://t.me/alshashi_571"
         target="_blank"
         rel="noopener noreferrer"
         data-cursor-hover

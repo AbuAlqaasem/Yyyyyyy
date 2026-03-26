@@ -15,9 +15,9 @@ export function Hero() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
 
   const handleScroll = () => {
-    const aboutSection = document.querySelector("#about")
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" })
+    const haqidaSection = document.querySelector("#haqida")
+    if (haqidaSection) {
+      haqidaSection.scrollIntoView({ behavior: "smooth" })
     }
   }
 

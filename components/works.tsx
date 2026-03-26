@@ -66,11 +66,13 @@ export function Works() {
                   </p>
                 </div>
 
-                {/* Circle Indicator */}
-                <motion.div
-                  className="w-3 h-3 rounded-full bg-white/60 group-hover:bg-white group-hover:scale-125 transition-all duration-300"
-                  whileHover={{ scale: 1.3 }}
-                />
+                {/* Ko'rish Text */}
+                <motion.span
+                  className="font-mono text-xs tracking-widest text-white/60 group-hover:text-white transition-colors duration-300"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  ko'rish
+                </motion.span>
               </motion.a>
             </Link>
           </motion.div>
