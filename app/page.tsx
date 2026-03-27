@@ -17,6 +17,9 @@ export default function Home() {
   const searchParams = useSearchParams()
 
   useEffect(() => {
+    // Always scroll to top first
+    window.scrollTo(0, 0)
+    
     const scrollTo = searchParams.get("scrollTo")
     if (scrollTo) {
       const timer = setTimeout(() => {
@@ -26,9 +29,6 @@ export default function Home() {
         }
       }, 100)
       return () => clearTimeout(timer)
-    } else {
-      // Reset scroll to top on normal page load
-      window.scrollTo(0, 0)
     }
   }, [searchParams])
 
