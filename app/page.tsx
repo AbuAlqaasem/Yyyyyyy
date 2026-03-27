@@ -1,7 +1,3 @@
-"use client"
-
-import { useEffect } from "react"
-import { useSearchParams } from "next/navigation"
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Haqida } from "@/components/haqida"
@@ -14,24 +10,6 @@ import { SmoothScroll } from "@/components/smooth-scroll"
 import { SectionBlend } from "@/components/section-blend"
 
 export default function Home() {
-  const searchParams = useSearchParams()
-
-  useEffect(() => {
-    // Always scroll to top first
-    window.scrollTo(0, 0)
-    
-    const scrollTo = searchParams.get("scrollTo")
-    if (scrollTo) {
-      const timer = setTimeout(() => {
-        const element = document.querySelector(`#${scrollTo}`)
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" })
-        }
-      }, 100)
-      return () => clearTimeout(timer)
-    }
-  }, [searchParams])
-
   return (
     <SmoothScroll>
       <CustomCursor />
