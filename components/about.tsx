@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 const statements = [
   "Biz kuchli vizual xikoyalar yaratamiz.",
   "Har bir dizayn nimadir aytishni maqsad qiladi.",
-  "Baranda to'g'ri rangni tanlash muhim.",
+  "Brenda to'g'ri rangni tanlash muhim.",
   "Tipografiya kommunikasiyaning tili.",
   "Estetika va funksionallik birgalikda ishlaydi.",
 ]
