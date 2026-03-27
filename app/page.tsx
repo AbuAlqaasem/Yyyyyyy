@@ -26,6 +26,9 @@ export default function Home() {
         }
       }, 100)
       return () => clearTimeout(timer)
+    } else {
+      // Reset scroll to top on normal page load
+      window.scrollTo(0, 0)
     }
   }, [searchParams])
 
