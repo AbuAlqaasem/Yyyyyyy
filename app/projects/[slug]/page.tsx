@@ -1,6 +1,7 @@
 "use client"
 
 import { useParams } from "next/navigation"
+import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -59,8 +60,14 @@ const projectsData: Record<
 
 export default function ProjectPage() {
   const params = useParams()
+  const router = useRouter()
   const slug = params.slug as string
   const project = projectsData[slug]
+
+  const handleWorksClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault()
+    router.push("/?scrollTo=works")
+  }
 
   if (!project) {
     return (
@@ -288,15 +295,15 @@ export default function ProjectPage() {
         className="py-24 px-8 md:px-12 border-t border-white/10 text-center"
       >
         <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">Yana loyihalar</h2>
-        <Link href="/#works">
+        <div onClick={handleWorksClick}>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 border border-white/20 rounded-full font-mono text-sm tracking-widest uppercase bg-transparent backdrop-blur-sm hover:bg-white hover:text-black transition-colors duration-500"
+            className="px-8 py-4 border border-white/20 rounded-full font-mono text-sm tracking-widest uppercase bg-transparent backdrop-blur-sm hover:bg-white hover:text-black transition-colors duration-500 cursor-pointer"
           >
             Boshqa Ishlarimiz
           </motion.button>
-        </Link>
+        </div>
       </motion.section>
     </div>
   )
