@@ -29,7 +29,7 @@ export function Haqida() {
       {/* Content */}
       <motion.div style={{ opacity }} className="max-w-3xl mx-auto">
         <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90 mb-8">
-          Yusupov Agency - 2020 yilda tashkil etgan grafik dizayn agentligi. Biz rang, tipografiya va vizual identitet orqali kuchli branding va tizimli vizual hikoyalar yaratamiz.
+          Yusupov Agency - 2022 yilda tashkil etgan grafik dizayn agentligi. Biz rang, tipografiya va vizual identitet orqali kuchli branding va tizimli vizual hikoyalar yaratamiz.
         </p>
 
         <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90 mb-8">
