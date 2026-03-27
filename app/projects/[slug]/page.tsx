@@ -62,17 +62,6 @@ export default function ProjectPage() {
   const slug = params.slug as string
   const project = projectsData[slug]
 
-  const handleWorksClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-    setTimeout(() => {
-      const worksSection = document.querySelector("#works")
-      if (worksSection) {
-        worksSection.scrollIntoView({ behavior: "smooth" })
-      }
-    }, 100)
-    window.location.href = "/#works"
-  }
-
   if (!project) {
     return (
       <div className="min-h-screen bg-[#050505] flex flex-col items-center justify-center px-8">
@@ -299,7 +288,7 @@ export default function ProjectPage() {
         className="py-24 px-8 md:px-12 border-t border-white/10 text-center"
       >
         <h2 className="font-sans text-3xl md:text-5xl font-light italic mb-8">Yana loyihalar</h2>
-        <Link href="/#works" onClick={handleWorksClick}>
+        <Link href="/#works">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
