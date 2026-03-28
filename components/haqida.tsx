@@ -37,7 +37,7 @@ export function Haqida() {
         </p>
 
         <p className="font-sans text-lg md:text-xl font-light leading-relaxed text-white/90">
-          Bizning maqsadimiz — har bir brend uchun uning estetikasi, psixologiyasi va missiyasini to'g'ri tahlil qilib, o'ziga xos vizual identitet yaratish. Biz har bir loyihaga katta e'tibor beramiz va sifatni asosiy ustuvorlik deb bilamiz.
+          Bizning maqsadimiz - har bir brend uchun uning estetikasi, psixologiyasi va missiyasini to'g'ri tahlil qilib, o'ziga xos vizual identitet yaratish. Biz har bir loyihaga katta e'tibor beramiz va sifatni asosiy ustuvorlik deb bilamiz.
         </p>
       </motion.div>
 
