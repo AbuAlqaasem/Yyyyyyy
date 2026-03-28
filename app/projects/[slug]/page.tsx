@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 const projectsData: Record<
@@ -126,9 +127,19 @@ export default function ProjectPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="w-full max-w-2xl aspect-square bg-white/5 border border-white/10 rounded-lg flex items-center justify-center mb-16"
+          className="w-full max-w-2xl aspect-square bg-white/5 border border-white/10 rounded-lg flex items-center justify-center mb-16 overflow-hidden"
         >
-          <p className="font-mono text-white/30 text-center">Logo & Brand Identity</p>
+          {slug === "ucc" ? (
+            <Image
+              src="/ucc-logo-brand.png"
+              alt="UCC Logo & Brand Identity"
+              width={600}
+              height={600}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <p className="font-mono text-white/30 text-center">Logo & Brand Identity</p>
+          )}
         </motion.div>
       </motion.section>
 
