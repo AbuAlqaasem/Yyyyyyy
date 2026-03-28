@@ -76,6 +76,7 @@ export function Navbar() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
             </span>
             <span className="font-mono text-xs tracking-wider text-muted-foreground">ONLAYN</span>
+                <span className="font-mono text-xs tracking-wider text-muted-foreground">ONLAYN</span>
           </div>
 
           {/* Mobile Menu Button */}
