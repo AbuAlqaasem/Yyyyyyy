@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Playfair_Display, Geist_Mono } from "next/font/google"
+import { Playfair_Display } from "next/font/google"
+import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -9,10 +10,7 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 })
 
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-})
+const geistMono = GeistMono
 
 export const metadata: Metadata = {
   title: "AI-Native Product Builder | Portfolio",
