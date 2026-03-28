@@ -3,13 +3,11 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import Image from "next/image"
 
 const projects = [
   {
     title: "UCC",
     description: "Korallar Kompaniyasi",
-    logo: "/ucc-logo.png",
   },
   {
     title: "ATIRGUL",
@@ -60,20 +58,9 @@ export function Works() {
               >
                 {/* Title and Description */}
                 <div className="flex-1">
-                  <div className="flex items-center gap-4 mb-4">
-                    <h3 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight group-hover:text-white/70 transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    {project.logo && (
-                      <Image
-                        src={project.logo}
-                        alt={`${project.title} logo`}
-                        width={60}
-                        height={60}
-                        className="w-12 h-12 md:w-16 md:h-16 object-contain"
-                      />
-                    )}
-                  </div>
+                  <h3 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight group-hover:text-white/70 transition-colors duration-300 mb-2">
+                    {project.title}
+                  </h3>
                   <p className="font-mono text-xs md:text-sm tracking-wider text-muted-foreground">
                     {project.description}
                   </p>
